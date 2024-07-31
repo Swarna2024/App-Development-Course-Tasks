@@ -1,0 +1,91 @@
+.manager-home-navbar {
+  margin: 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+}
+
+.manager-home-navbar-logo {
+  height: 50px;
+}
+
+.manager-home-navbar-links .manager-home-nav-link {
+  margin: 0 1rem;
+  text-decoration: none;
+  color: #333;
+  font-weight: bold;
+}
+
+.manager-home-container {
+  margin-top: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 2rem;
+}
+
+.manager-home-image img {
+  max-width: 100%;
+  height: auto;
+}
+
+.manager-home-text {
+  max-width: 50%;
+}
+
+.manager-home-text h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.manager-home-text .manager-home-highlight {
+  color: #ff5f0f;
+}
+
+.manager-home-text .manager-home-highlight-manager {
+  color: #333;
+}
+
+.manager-home-sub-title {
+  font-size: 1.2rem;
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.manager-home-desp {
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 2rem;
+}
+
+.manager-home-button-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.manager-home-button-group h2 {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+  color: #000000;
+}
+
+.manager-home-start-button {
+  display: block;
+  margin: 0.5rem 0;
+  padding: 0.75rem 1.5rem;
+  text-decoration: none;
+  color: #fff;
+  background-color: #ff5f0f;
+  border-radius: 5px;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s, transform 0.3s;
+}
+
+.manager-home-start-button:hover {
+  background-color: #e64a19;
+  transform: scale(1.05);
+}
