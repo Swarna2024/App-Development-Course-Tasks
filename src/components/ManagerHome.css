@@ -1,91 +1,192 @@
-.manager-home-navbar {
-  margin: 50px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: #fff;
-  border-bottom: 1px solid #ddd;
-}
+/* ManagerHome.css */
 
-.manager-home-navbar-logo {
-  height: 50px;
-}
-
-.manager-home-navbar-links .manager-home-nav-link {
-  margin: 0 1rem;
-  text-decoration: none;
-  color: #333;
-  font-weight: bold;
-}
-
+/* Container for the manager home page grid layout */
 .manager-home-container {
-  margin-top: 50px;
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 30px; /* Gutter between columns */
+  padding: 20px;
   align-items: center;
-  justify-content: space-between;
-  padding: 2rem;
+}
+
+/* Styling for the SVG image */
+.manager-home-image {
+  grid-column: span 3; 
+  margin-left: -30%; /* Move image left */
+  margin-top: 20%; /* Move image further down */
+  position: relative; /* Ensure positioning adjustments are effective */
 }
 
 .manager-home-image img {
-  max-width: 100%;
-  height: auto;
+  width: 100%; /* Ensure the image scales responsively */
+  height: auto; /* Maintain the aspect ratio */
+  max-width: 400px; /* Set a maximum width for larger screens */
 }
 
+/* Styling for text content */
 .manager-home-text {
-  max-width: 50%;
+  margin-left: 10%;
+  grid-column: span 8; /* Adjust to span 8 out of 12 columns */
 }
 
-.manager-home-text h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-
-.manager-home-text .manager-home-highlight {
-  color: #ff5f0f;
-}
-
-.manager-home-text .manager-home-highlight-manager {
-  color: #333;
-}
-
-.manager-home-sub-title {
-  font-size: 1.2rem;
-  color: #666;
-  margin-bottom: 1rem;
-}
-
-.manager-home-desp {
-  font-size: 1rem;
-  color: #444;
-  margin-bottom: 2rem;
-}
-
-.manager-home-button-group {
+/* Navbar styling */
+.manager-navbar {
+  margin-top: 2%;
   display: flex;
-  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
 }
 
-.manager-home-button-group h2 {
-  margin-top: 1rem;
-  font-size: 1.5rem;
-  color: #000000;
-}
-
-.manager-home-start-button {
-  display: block;
-  margin: 0.5rem 0;
-  padding: 0.75rem 1.5rem;
-  text-decoration: none;
-  color: #fff;
-  background-color: #ff5f0f;
-  border-radius: 5px;
-  text-align: center;
+.manager-navbar-logo {
+  margin-left: 6%;
+  font-size: 24px;
   font-weight: bold;
-  transition: background-color 0.3s, transform 0.3s;
 }
 
-.manager-home-start-button:hover {
-  background-color: #e64a19;
-  transform: scale(1.05);
+.manager-navbar-links {
+  margin-right: 12%;
+  display: flex;
+  gap: 20px; /* Space between navigation items */
+}
+
+.manager-navbar-links a {
+  color: black;
+  text-decoration: none;
+  font-size: 20px;
+}
+
+.manager-navbar-links a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  .manager-home-container {
+      grid-template-columns: 1fr; /* Stack columns vertically on small screens */
+      text-align: center; /* Center text content */
+  }
+
+  .manager-home-image {
+      grid-column: 1 / -1; /* Full width for the image on small screens */
+      justify-self: center; /* Center the image */
+      margin-left: 0; /* Remove left margin */
+      margin-top: 20px; /* Adjust margin to push the image down */
+  }
+
+  .manager-home-text {
+      grid-column: 1 / -1; /* Full width for text on small screens */
+      margin-left: 0; /* Remove left margin */
+  }
+
+  .manager-navbar-logo {
+      margin-left: 0;
+  }
+
+  .manager-navbar-links {
+      margin-right: 0;
+      flex-direction: column;
+      gap: 10px;
+  }
+}
+
+/* Ghost button styling */
+.manager-ghost-button {
+  background-color: transparent; /* Transparent background */
+  border: 1.5px solid #FF5F0F; /* Border color */
+  color: #FF5F0F !important; /* Text color */ 
+  padding: 8px 13px; /* Padding around the text */
+  font-size: 16px; /* Font size */
+  font-weight: bold ; /* Font weight */
+  text-transform: uppercase; /* Uppercase text */
+  border-radius: 4px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor on hover */
+  transition: all 0.3s ease; /* Smooth transition */
+  outline: none; /* Remove default outline */
+  text-decoration: none; /* Remove underline from text */
+  position: relative; /* Relative positioning to adjust with top */
+  top: -8px; /* Move the button up by 10px, adjust as needed */
+}
+
+.manager-ghost-button:hover,
+.manager-ghost-button:focus {
+  background-color: #FF5F0F; /* Background color on hover/focus */
+  color: #fff !important; /* Text color on hover/focus */
+  text-decoration: none !important;
+}
+
+/* Start Now button styling */
+.manager-start-button {
+  display: inline-block;
+  background-color: #FF5F0F; /* Background color */
+  color: #fff; /* Text color */
+  padding: 10px 20px; /* Padding */
+  font-size: 16px; /* Font size */
+  font-weight: bold; /* Font weight */
+  text-transform: uppercase; /* Uppercase text */
+  border-radius: 4px; /* Rounded corners */
+  text-decoration: none; /* Remove underline */
+  transition: all 0.3s ease; /* Smooth transition */
+  margin-top: 20px; /* Space above the button */
+}
+
+.manager-start-button:hover,
+.manager-start-button:focus {
+  background-color: #e04f00; /* Darker background on hover/focus */
+  transform: scale(1.1);
+  outline: none; /* Remove default outline */
+}
+
+.manager-home-title {
+  font-size: 60px;
+  font-weight: bold;
+  margin-top: -60px;
+  line-height: 55px;
+}
+
+.manager-highlight-timetrek {
+  color: #FF5F0F;
+}
+
+.manager-desp {
+  font-size: 16px; /* Adjust the font size */
+  line-height: 1.5; /* Adjust the line height for readability */
+  max-width: 450px; /* Adjust the max width to control text wrapping */
+  margin-right: 40px;
+  font-weight: 500;
+}
+
+.manager-sub-title {
+  margin-top: -30px;
+  margin-bottom: 50px;
+  text-transform: uppercase;
+  font-size: 9px;
+  font-weight: 300;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 0.5px;
+  padding-left: 10px;
+}
+
+.manager-navbar-logo {
+  width: 150px;
+  height: auto;
+  margin-left: 60%;
+}
+
+.manager-nav-link {
+  color: #000; /* Default text color */
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease; /* Smooth transition */
+}
+
+.manager-nav-link:hover {
+  color: #FF5F00; /* Change color on hover */
+}
+
+.manager-button-group {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-top: 20px;
 }

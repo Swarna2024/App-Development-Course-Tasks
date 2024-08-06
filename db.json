@@ -132,6 +132,20 @@
       "password": "12345678",
       "role": "staff",
       "organization": "SKCET"
+    },
+    {
+      "id": "6e67",
+      "email": "sivaramjioo5@gamil.com",
+      "password": "qwerty",
+      "role": "staff",
+      "organization": "SKCET"
+    },
+    {
+      "id": "4869",
+      "email": "suja@gmail.com",
+      "password": "12345678",
+      "role": "staff",
+      "organization": "SKCET"
     }
   ]
 }
