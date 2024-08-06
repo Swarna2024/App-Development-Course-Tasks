@@ -51,56 +51,87 @@
 
 // export default ManagerHome;
 
+// Home.jsx
+// import React from 'react';
+// import { Link } from 'react-router-dom';
+// import './Home.css';
+// import HomePage from '../assests/HomePage.svg'; // Update the path as necessary
+// import PageLogo from '../assests/FinalLogo.png';
+
+// const Home = () => {
+//   return (
+//     <>
+//       <nav className="navbar">
+//         <div>
+//           <img className="navbar-logo" src={PageLogo} alt="Your Logo" />
+//         </div>
+//         <div className="navbar-links">
+//           <Link to="/home" className="nav-link">Home</Link>
+//           <Link to="/features" className="nav-link">Features</Link>
+//           <Link to="/about" className="nav-link">About</Link>
+//           <Link to="/profile" className="nav-link">Profile</Link>
+//         </div>
+//       </nav>
+//       <div className="home-container">
+//         <div className="home-text" style={{ marginTop: '-50px' }}>
+//           <h1>
+//             Welcome to TimeTrek<br />
+//             <span className="highlight">Your <span className="highlight-timetrek">Productivity</span> Hub</span>
+//           </h1>
+//           <p className="sub-title" style={{ marginTop: '-30px' }}>Explore our features and start boosting your productivity today.</p>
+//           <p className="desp">Manage your tasks, stay on top of notifications, and customize your profile to fit your workflow.</p>
+//           <Link to="/shcedule" className="start-button">View Schedule</Link>
+//         </div>
+//         <div className="home-image">
+//           <img src={HomePage} alt="Home Description" />
+//         </div>
+//       </div>
+//     </>
+//   );
+// };
+
+// export default Home;
+
 import React from 'react';
 import { Link } from 'react-router-dom';
-import './ManagerHome.css'; 
-import ManagerHomePage from '../assests/HomePage.svg'; 
+import './ManagerHome.css';
+import HomePage from '../assests/HomePage.svg'; // Update the path as necessary
 import PageLogo from '../assests/FinalLogo.png';
 
-const ManagerHome = () => {
+const ManageHome = () => {
   return (
     <>
-      <nav className="manager-home-navbar">
+      <nav className="navbar">
         <div>
-          <img className="manager-home-navbar-logo" src={PageLogo} alt="Your Logo" />
+          <img className="navbar-logo" src={PageLogo} alt="Your Logo" />
         </div>
-        <div className="manager-home-navbar-links">
-          <Link to="/manager-home" className="manager-home-nav-link">Home</Link>
-          <Link to="/features" className="manager-home-nav-link">Features</Link>
-          <Link to="/about" className="manager-home-nav-link">About</Link>
-          <Link to="/profile" className="manager-home-nav-link">Profile</Link>
-          <Link to="/" className="manager-home-nav-link">Log out</Link>
+        <div className="navbar-links">
+          <Link to="/manager-home" className="nav-link">Home</Link>
+          <Link to="/about" className="nav-link">About</Link>
+          <Link to="/manager-profile" className="nav-link">Profile</Link>
+          <Link to="/" className="nav-link">Log out</Link>
         </div>
       </nav>
-      <div className="manager-home-container">
-        <div className="manager-home-image">
-          <img src={ManagerHomePage} alt="Manager Home Description" />
-        </div>
-        <div className="manager-home-text">
+      <div className="home-container">
+        <div className="home-text" style={{ marginTop: '-50px' }}>
           <h1>
-            Welcome to the Manager Dashboard<br />
-            <span className="manager-home-highlight">Efficient <span className="manager-home-highlight-manager">Team Management</span></span>
+            Welcome Manager<br />
+            <span className="highlight">Your <span className="highlight-timetrek">Work Management</span></span>
           </h1>
-          <p className="manager-home-sub-title">Oversee and streamline your team's workflow effortlessly.</p>
-          <p className="manager-home-desp">Manage employees, create and assign shifts, and handle requests with ease.</p>
-          <div className="manager-home-button-group">
-            <h2>Employee Management</h2>
-            <Link to="/employee-management/add" className="manager-home-start-button">Add Employee</Link>
-            <Link to="/employee-management/edit" className="manager-home-start-button">Edit Employee</Link>
-            <Link to="/employee-management/delete" className="manager-home-start-button">Delete Employee</Link>
-            
-            <h2>Shift Management</h2>
-            <Link to="/shift-management/create" className="manager-home-start-button">Create Shift</Link>
-            <Link to="/shift-management/edit" className="manager-home-start-button">Edit Shift</Link>
-            <Link to="/shift-management/assign" className="manager-home-start-button">Assign Shift</Link>
-            
-            <h2>Requests</h2>
-            <Link to="/requests" className="manager-home-start-button">View Requests</Link>
+          <p className="sub-title" style={{ marginTop: '-30px' }}>Manage your tasks and stay organized effortlessly.</p>
+          <p className="desp">View your schedule, manage staff, handle requests, and track your progress.</p>
+          <div className="button-group">
+            <Link to="/manage-staff" className="start-button">Manage Staffs</Link>
+            <Link to="/view-requests" className="start-button">View Requests</Link>
+            <Link to="/view-schedule" className="start-button">View Schedule</Link>
           </div>
+        </div>
+        <div className="home-image">
+          <img src={HomePage} alt="Home Description" />
         </div>
       </div>
     </>
   );
 };
 
-export default ManagerHome;
+export default ManageHome;

@@ -241,7 +241,9 @@ import Footer from './components/Footer';
 import ManagerHome from './components/ManagerHome';
 import { AuthProvider } from './components/AuthContext';
 import PrivateRoute from './components/PrivateRoute';
-
+import Navbar from './components/Navbar.jsx';
+import CalendarEvents from './components/CalenderEvents.jsx';
+import ManagerProfile from './components/ManagerProfile.jsx'
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
     return localStorage.getItem('isAuthenticated') === 'true';
@@ -253,7 +255,9 @@ function App() {
 
   return (
     <div>
+      {/* <Navbar/> */}
       <AuthProvider>
+        
     <Router>
       <Routes>
         <Route path="/" element={<LandingPage />} />
@@ -270,6 +274,11 @@ function App() {
         <Route 
           path="/manager-home" 
           element={<PrivateRoute> <ManagerHome /> </PrivateRoute>} 
+        />
+
+<Route 
+          path="/manager-profile" 
+          element={<PrivateRoute> <ManagerProfile /> </PrivateRoute>} 
         />
         
 

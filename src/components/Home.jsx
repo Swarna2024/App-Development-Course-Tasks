@@ -54,7 +54,6 @@ const Home = () => {
         </div>
         <div className="navbar-links">
           <Link to="/home" className="nav-link">Home</Link>
-          <Link to="/features" className="nav-link">Features</Link>
           <Link to="/about" className="nav-link">About</Link>
           <Link to="/profile" className="nav-link">Profile</Link>
           <Link to="/" className="nav-link">Log out</Link>
