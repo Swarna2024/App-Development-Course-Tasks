@@ -388,7 +388,7 @@ function Login({ setIsAuthenticated }) {
       setLoading(true);
       try {
         console.log('Making request to fetch users...');
-        const response = await axios.get('http://localhost:3001/users');
+        const response = await axios.get('http://localhost:3000/users');
         console.log('Received response:', response.data);
         const user = response.data.find(user => user.email === email);
 

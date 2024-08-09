@@ -1,32 +1,4 @@
-/* Navbar CSS (shared) */
-.navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    background-color: #fff;
-    border-bottom: 1px solid #ccc;
-  }
-  
-  .navbar-logo {
-    height: 40px;
-  }
-  
-  .navbar-links {
-    display: flex;
-    gap: 15px;
-  }
-  
-  .nav-link {
-    text-decoration: none;
-    color: #ff5f0f;
-    font-weight: bold;
-  }
-  
-  .nav-link:hover {
-    text-decoration: underline;
-  }
-  
+
   /* About Page Specific CSS */
   .about-container {
     display: flex;

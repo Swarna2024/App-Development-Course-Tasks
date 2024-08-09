@@ -198,7 +198,7 @@ function Register() {
     const newErrors = validate();
     if (Object.keys(newErrors).length === 0) {
       try {
-        const response = await axios.post('http://localhost:3001/users', {
+        const response = await axios.post('http://localhost:3000/users', {
           email,
           password,
           role,

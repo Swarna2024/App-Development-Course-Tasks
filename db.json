@@ -146,6 +146,13 @@
       "password": "12345678",
       "role": "staff",
       "organization": "SKCET"
+    },
+    {
+      "id": "5b8a",
+      "email": "nswarna2024@gmail.com",
+      "password": "12345678",
+      "role": "staff",
+      "organization": "SKCET"
     }
   ]
 }
