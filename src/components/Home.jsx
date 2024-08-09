@@ -44,11 +44,12 @@ import { Link } from 'react-router-dom';
 import './Home.css';
 import HomePage from '../assests/HomePage.svg'; // Update the path as necessary
 import PageLogo from '../assests/FinalLogo.png';
+import Navbar from './Navbar';
 
 const Home = () => {
   return (
     <>
-      <nav className="navbar">
+      {/* <nav className="navbar">
         <div>
           <img className="navbar-logo" src={PageLogo} alt="Your Logo" />
         </div>
@@ -58,7 +59,9 @@ const Home = () => {
           <Link to="/profile" className="nav-link">Profile</Link>
           <Link to="/" className="nav-link">Log out</Link>
         </div>
-      </nav>
+      </nav> */}
+
+      <Navbar/>
       <div className="home-container">
         <div className="home-text" style={{ marginTop: '-50px' }}>
           <h1>

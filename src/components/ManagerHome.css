@@ -1,5 +1,3 @@
-/* ManagerHome.css */
-
 /* Container for the manager home page grid layout */
 .manager-home-container {
   display: grid;
@@ -30,34 +28,43 @@
 }
 
 /* Navbar styling */
-.manager-navbar {
+.navbar {
   margin-top: 2%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 10px 20px;
+  background-color: #fff; /* Optional background color */
 }
 
-.manager-navbar-logo {
-  margin-left: 6%;
-  font-size: 24px;
-  font-weight: bold;
+.navbar-logo {
+  width: 150px;
+  height: auto;
 }
 
-.manager-navbar-links {
-  margin-right: 12%;
+.navbar-links {
   display: flex;
   gap: 20px; /* Space between navigation items */
 }
 
-.manager-navbar-links a {
+.navbar-links a {
   color: black;
   text-decoration: none;
   font-size: 20px;
 }
 
-.manager-navbar-links a:hover {
+.navbar-links a:hover {
   text-decoration: underline;
+}
+
+.menu-icon {
+  display: none; /* Hide the menu icon by default */
+  cursor: pointer;
+}
+
+.menu-icon img {
+  width: 30px;
+  height: auto;
 }
 
 /* Responsive design */
@@ -79,14 +86,25 @@
       margin-left: 0; /* Remove left margin */
   }
 
-  .manager-navbar-logo {
-      margin-left: 0;
-  }
-
-  .manager-navbar-links {
-      margin-right: 0;
+  .navbar-links {
+      display: none; /* Hide the links by default on small screens */
       flex-direction: column;
       gap: 10px;
+      position: absolute;
+      top: 60px; /* Adjust as necessary */
+      right: 0;
+      background-color: white; /* Optional background color */
+      width: 200px; /* Adjust as necessary */
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Optional box shadow */
+      padding: 10px; /* Optional padding */
+  }
+
+  .navbar-links.open {
+      display: flex; /* Show the links when the menu is open */
+  }
+
+  .menu-icon {
+      display: block; /* Show the menu icon on small screens */
   }
 }
 
@@ -165,23 +183,6 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 0.5px;
   padding-left: 10px;
-}
-
-.manager-navbar-logo {
-  width: 150px;
-  height: auto;
-  margin-left: 60%;
-}
-
-.manager-nav-link {
-  color: #000; /* Default text color */
-  text-decoration: none;
-  font-size: 16px;
-  transition: color 0.3s ease; /* Smooth transition */
-}
-
-.manager-nav-link:hover {
-  color: #FF5F00; /* Change color on hover */
 }
 
 .manager-button-group {

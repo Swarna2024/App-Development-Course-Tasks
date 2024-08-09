@@ -3,11 +3,12 @@ import { Link } from 'react-router-dom';
 import Logo from '../assests/FinalLogo.png'
 import AboutImage from '../assests/About.svg'
 import './About.css'; 
+import Navbar from './Navbar';
 
 const About = () => {
   return (
     <>
-      <nav className="navbar">
+      {/* <nav className="navbar">
         <div>
           <img className="navbar-logo" src={Logo} alt="Your Logo" />
         </div>
@@ -17,7 +18,9 @@ const About = () => {
           <Link to="/profile" className="nav-link">Profile</Link>
           <Link to="/" className="nav-link">Log out</Link>
         </div>
-      </nav>
+      </nav> */}
+
+      <Navbar/>
       <div className="about-container">
         <div className="about-image">
           <img src={AboutImage} alt="About Description" />
