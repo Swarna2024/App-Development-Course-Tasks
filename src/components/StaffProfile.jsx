@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import './ManagerProfile.css';
+import './StaffProfile.css';
 import Navbar from './Navbar';
 
-const ManagerProfile = () => {
+const StaffProfile = () => {
   const [profile, setProfile] = useState({
     firstName: '',
     lastName: '',
@@ -16,11 +16,10 @@ const ManagerProfile = () => {
     about: '',
   });
 
-  const [isEditing, setIsEditing] = useState(false); // State to manage edit mode
+  const [isEditing, setIsEditing] = useState(false);
 
   useEffect(() => {
     // Fetch the user profile from an API and set it to the state
-    // This is a placeholder for the actual fetch call
     setProfile({
       firstName: 'John',
       lastName: 'Doe',
@@ -44,39 +43,38 @@ const ManagerProfile = () => {
 
   const handleSave = () => {
     // Save the user profile to an API
-    // This is a placeholder for the actual save call
     console.log('Profile saved', profile);
-    setIsEditing(false); // Exit edit mode after saving
+    setIsEditing(false);
   };
 
   const handleEdit = () => {
-    setIsEditing(true); // Enter edit mode
+    setIsEditing(true);
   };
 
   return (
-    <div className="manager-container">
+    <div className="staff-profile-container">
       <Navbar />
-      <div className="main-content">
-        <nav className="sidebar">
+      <div className="staff-main-content">
+        <nav className="staff-sidebar">
           <ul>
-            <li><Link to="/manager-profile" className="sidebar-link">Profile</Link></li>
-            <li><Link to="/staffs" className="sidebar-link">Staffs</Link></li>
-            <li><Link to="/privacypolicy" className="sidebar-link">Privacy and Policy</Link></li>
-            <li><Link to="/notifications" className="sidebar-link">Notifications</Link></li>
-            <li><Link to="/about" className="sidebar-link">About us</Link></li>
-            <li><Link to="/help" className="sidebar-link">Help</Link></li>
-            <li><Link to="/manager-home" className="sidebar-link">Back</Link></li>
-            <li><Link to="/" className="sidebar-link">Log Out</Link></li>
+            <li><Link to="/staff-profile" className="staff-sidebar-link">Profile</Link></li>
+            <li><Link to="/staffs" className="staff-sidebar-link">Tasks</Link></li>
+            <li><Link to="/privacypolicy" className="staff-sidebar-link">Privacy and Policy</Link></li>
+            <li><Link to="/notifications" className="staff-sidebar-link">Notifications</Link></li>
+            <li><Link to="/about" className="staff-sidebar-link">About us</Link></li>
+            <li><Link to="/help" className="staff-sidebar-link">Help</Link></li>
+            <li><Link to="/home" className="staff-sidebar-link">Back</Link></li>
+            <li><Link to="/" className="staff-sidebar-link">Log Out</Link></li>
           </ul>
         </nav>
-        <div className="profile-content">
-          <div className="profile-details">
-            <div className="profile-header">
-              <h1 className="profile-name">{profile.firstName} {profile.lastName}</h1>
-              <p className="profile-title">Manager</p>
+        <div className="staff-profile-content">
+          <div className="staff-profile-details">
+            <div className="staff-profile-header">
+              <h1 className="staff-profile-name">{profile.firstName} {profile.lastName}</h1>
+              <p className="staff-profile-title">Staff Member</p>
             </div>
             <h2>Profile Information</h2>
-            <div className="profile-info">
+            <div className="staff-profile-info">
               <label>First Name:
                 <input type="text" name="firstName" value={profile.firstName} onChange={handleChange} disabled={!isEditing} />
               </label>
@@ -105,11 +103,11 @@ const ManagerProfile = () => {
                 <textarea name="about" value={profile.about} onChange={handleChange} disabled={!isEditing}></textarea>
               </label>
             </div>
-            <div className="profile-actions">
+            <div className="staff-profile-actions">
               {isEditing ? (
-                <button className="save-button" onClick={handleSave}>Save</button>
+                <button className="staff-save-button" onClick={handleSave}>Save</button>
               ) : (
-                <button className="edit-button" onClick={handleEdit}>Edit</button>
+                <button className="staff-edit-button" onClick={handleEdit}>Edit</button>
               )}
             </div>
           </div>
@@ -119,4 +117,4 @@ const ManagerProfile = () => {
   );
 };
 
-export default ManagerProfile;
+export default StaffProfile;
