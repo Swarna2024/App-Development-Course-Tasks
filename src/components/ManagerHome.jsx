@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './ManagerHome.css';
-import HomePage from '../assests/HomePage.svg'; // Update the path as necessary
+import HomePage from '../assests/undraw_predictive_analytics_re_wxt8.svg'; // Update the path as necessary
 import PageLogo from '../assests/FinalLogo.png';
 import MenuIcon from '../assests/menu-logo.svg'; // Add a menu icon for smaller screens
 import Navbar from './Navbar';

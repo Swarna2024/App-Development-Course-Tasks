@@ -244,6 +244,9 @@ import PrivateRoute from './components/PrivateRoute';
 import Navbar from './components/Navbar.jsx';
 import CalendarEvents from './components/CalenderEvents.jsx';
 import ManagerProfile from './components/ManagerProfile.jsx'
+import PrivacyPolicy from './components/PrivacyandPolicy.jsx';
+import StaffProfile from './components/StaffProfile.jsx';
+import ViewSchedule from './components/ViewSchedule.jsx';
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
     return localStorage.getItem('isAuthenticated') === 'true';
@@ -279,6 +282,21 @@ function App() {
 <Route 
           path="/manager-profile" 
           element={<PrivateRoute> <ManagerProfile /> </PrivateRoute>} 
+        />
+
+<Route 
+          path="/staff-profile" 
+          element={<PrivateRoute> <StaffProfile /> </PrivateRoute>} 
+        />
+        
+<Route 
+          path="/privacypolicy" 
+          element={<PrivateRoute> <PrivacyPolicy /> </PrivateRoute>} 
+        />
+
+<Route 
+          path="/view-schedule" 
+          element={<PrivateRoute> <ViewSchedule /> </PrivateRoute>} 
         />
         
 
