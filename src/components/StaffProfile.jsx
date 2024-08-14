@@ -78,7 +78,7 @@ const StaffProfile = () => {
               <label>First Name:
                 <input type="text" name="firstName" value={profile.firstName} onChange={handleChange} disabled={!isEditing} />
               </label>
-              <label>Last Name:
+              <label>Last Name: 
                 <input type="text" name="lastName" value={profile.lastName} onChange={handleChange} disabled={!isEditing} />
               </label>
               <label>Email:

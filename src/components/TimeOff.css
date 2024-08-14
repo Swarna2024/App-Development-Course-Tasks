@@ -1,0 +1,89 @@
+/* The main container that wraps everything */
+.timeoff-container {
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f7f8;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center;     /* Center vertically */
+    height: 100vh;           /* Take full viewport height */
+    flex-direction: column;  /* Stack elements (Navbar and form) vertically */
+  }
+  
+  /* Styling for the form itself */
+  .timeoff-form {
+    background: #fff;
+    padding: 20px 40px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+  }
+  
+  .timeoff-h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+    font-size: 24px;
+  }
+  
+  .timeoff-p {
+    text-align: center;
+    color: #666;
+    margin-bottom: 30px;
+  }
+  
+  .timeoff-label {
+    font-weight: bold;
+    color: #333;
+    display: block;
+    margin-bottom: 5px;
+  }
+  
+  .timeoff-input-text,
+  .timeoff-select {
+    width: 100%; /* Ensure full width */
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 14px;
+    box-sizing: border-box; /* Ensure padding doesn't affect width */
+  }
+  
+  .timeoff-input-text:focus,
+  .timeoff-select:focus {
+    border-color: #ff5f0f;
+    outline: none;
+  }
+  
+  .timeoff-button {
+    width: 100%;
+    background-color: #ff5f0f;
+    color: #fff;
+    padding: 12px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .timeoff-button:hover {
+    background-color: #e64e00;
+  }
+  
+  /* Flexbox layout for the date fields */
+  .timeoff-div {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px; /* Gap between the date fields */
+  }
+  
+  .timeoff-div .timeoff-input-text,
+  .timeoff-div .timeoff-select {
+    width: calc(33.33% - 6.67px); /* Three equal-width inputs */
+  }
+  

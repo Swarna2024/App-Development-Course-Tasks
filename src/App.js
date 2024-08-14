@@ -247,6 +247,10 @@ import ManagerProfile from './components/ManagerProfile.jsx'
 import PrivacyPolicy from './components/PrivacyandPolicy.jsx';
 import StaffProfile from './components/StaffProfile.jsx';
 import ViewSchedule from './components/ViewSchedule.jsx';
+import Tasks from './components/Tasks.jsx';
+import TimeOffRequestForm from './components/ReqTimeOff.jsx';
+import ScheduleTable from './components/ListOfReq.jsx';
+
 function App() {
   const [isAuthenticated, setIsAuthenticated] = useState(() => {
     return localStorage.getItem('isAuthenticated') === 'true';
@@ -298,6 +302,21 @@ function App() {
           path="/view-schedule" 
           element={<PrivateRoute> <ViewSchedule /> </PrivateRoute>} 
         />
+        <Route 
+          path="/tasks" 
+          element={<PrivateRoute> <Tasks /> </PrivateRoute>} 
+        />
+
+<Route 
+          path="/req-timeoff" 
+          element={<PrivateRoute> <TimeOffRequestForm /> </PrivateRoute>} 
+        />
+
+<Route 
+          path="/view-requests" 
+          element={<PrivateRoute> <ScheduleTable /> </PrivateRoute>} 
+        />
+        
         
 
       </Routes>
