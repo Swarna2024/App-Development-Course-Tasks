@@ -16,20 +16,41 @@
 //   return useContext(AuthContext);
 // };
 
-import React, { createContext, useState, useContext } from 'react';
+import React, { createContext, useState, useContext, useEffect } from 'react';
 
 const AuthContext = createContext();
 
 export const AuthProvider = ({ children }) => {
-  const [auth, setAuth] = useState(false);
+  const [auth, setAuth] = useState(null);  // Initialize with null to signify loading state
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      setAuth(true);  // User is authenticated if token exists
+    } else {
+      setAuth(false); // No token means the user is not authenticated
+    }
+  }, []);
+
+  const login = (token) => {
+    localStorage.setItem('token', token);
+    setAuth(true);
+  };
+
+  const logout = () => {
+    localStorage.removeItem('token');
+    setAuth(false);
+  };
+
+  if (auth === null) {
+    return <div>Loading...</div>; // Or a spinner/loading indicator
+  }
 
   return (
-    <AuthContext.Provider value={{ auth, setAuth }}>
+    <AuthContext.Provider value={{ auth, login, logout, setAuth }}>
       {children}
     </AuthContext.Provider>
   );
 };
 
-export const useAuth = () => {
-  return useContext(AuthContext);
-};
+export const useAuth = () => useContext(AuthContext);

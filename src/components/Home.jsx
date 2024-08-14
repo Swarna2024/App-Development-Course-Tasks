@@ -71,10 +71,10 @@ const Home = () => {
           <p className="sub-title" style={{ marginTop: '-30px' }}>Manage your tasks and stay organized effortlessly.</p>
           <p className="desp">View your schedule, request time off, track your progress, and stay on top of due dates.</p>
           <div className="button-group">
-            <Link to="/schedule" className="start-button">View Schedule</Link>
-            <Link to="/request-time-off" className="start-button">Request Time Off</Link>
-            <Link to="/progress" className="start-button">Progress</Link>
-            <Link to="/due-date" className="start-button">Due Date</Link>
+            <Link to="/view-schedule" className="start-button">View Schedule</Link>
+            <Link to="/req-timeoff" className="start-button">Request Time Off</Link>
+            {/* <Link to="/progress" className="start-button">Progress</Link> */}
+            <Link to="/tasks" className="start-button">Tasks</Link>
           </div>
         </div>
         <div className="home-image">
